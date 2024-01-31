@@ -1,7 +1,10 @@
 import {motion } from 'framer-motion';
 import { forwardRef } from 'react';
 
-const Button = forwardRef((props, ref)=>{
+interface ChildProps {}
+
+const Button = forwardRef<HTMLButtonElement,ChildProps>((props, ref)=>{
+  console.log(ref)
   return <button ref={ref}>...</button>
 })
 
